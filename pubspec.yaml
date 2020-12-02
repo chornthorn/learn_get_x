@@ -12,6 +12,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   #Third Package
   get:
+  get_storage:
   equatable: ^1.2.5
   http: ^0.12.2
   shimmer: ^1.1.2
