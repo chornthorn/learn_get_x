@@ -4,6 +4,7 @@ import 'package:imake_get_x/routes/routes.dart';
 import 'package:imake_get_x/utils/translations/app_language.dart';
 
 import 'getx/bindings/splash_binding.dart';
+import 'utils/themes/app_themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,10 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: myTheme,
       initialRoute: '/',
       initialBinding: SplashBinding(),
       onGenerateRoute: generateRoute,
