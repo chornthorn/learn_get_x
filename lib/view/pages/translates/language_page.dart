@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:imake_get_x/getx/controllers/translate_controller.dart';
 
 class LanguagePage extends StatelessWidget {
@@ -34,6 +35,8 @@ class LanguagePage extends StatelessWidget {
                               selected: selected,
                               index: data.id,
                             );
+                            GetStorage box = new GetStorage();
+                            box.write('kh', data.id);
                           },
                         ),
                       );

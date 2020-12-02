@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 class TranslateController extends GetxController {
   var _langList = <LangList>[].obs;
@@ -10,6 +11,10 @@ class TranslateController extends GetxController {
   int get selectIndex => this._selectIndex.value;
 
   void _onInit() {
+    GetStorage box = new GetStorage();
+
+    if (box.read('kh') != null) {}
+
     var lang = new LangList(name: 'english', id: 0);
     _langList.add(lang);
     var lang1 = new LangList(name: 'cambodia', id: 1);
